@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Unit Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><span class="highlight">Engineering</span> Unit Converter</h1>
+            <p>Precision tools for modern engineers.</p>
+        </header>
+
+        <main class="converter-card">
+            <div class="tabs">
+                <button class="tab-btn active" data-category="length">Length</button>
+                <button class="tab-btn" data-category="mass">Mass</button>
+                <button class="tab-btn" data-category="temperature">Temp</button>
+            </div>
+
+            <div class="input-group">
+                <div class="input-block">
+                    <label for="input-value">From</label>
+                    <input type="number" id="input-value" placeholder="0" step="any">
+                    <select id="input-unit"></select>
+                </div>
+                
+                <div class="icon-block">
+                    <span>&#8644;</span> </div>
+
+                <div class="input-block">
+                    <label for="output-value">To</label>
+                    <input type="text" id="output-value" readonly placeholder="0">
+                    <select id="output-unit"></select>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="convert-btn">Convert</button>
+                <button id="save-btn" class="secondary-btn">Save to Favorites</button>
+            </div>
+        </main>
+
+        <section class="favorites-section">
+            <h2>Saved Conversions</h2>
+            <ul id="favorites-list">
+                <li class="empty-msg">No saved conversions yet.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
